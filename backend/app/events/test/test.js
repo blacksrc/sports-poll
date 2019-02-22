@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 const app = require("./../../../app");
 
 describe("POST /events", () => {
-  it("Should create new event", done => {
+  it("Should create a new event", done => {
     let newEvent = {
       awayName: "Test awayName",
       createdAt: new Date(),
@@ -47,7 +47,7 @@ describe("POST /events", () => {
 });
 
 describe("DELETE /events/:id", () => {
-  it("Should create new event", done => {
+  it("Should delete an event", done => {
     let newEvent = {
       awayName: "Test awayName",
       createdAt: new Date(),
