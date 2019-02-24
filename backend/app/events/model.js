@@ -1,12 +1,11 @@
-'use strict';
-
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// Define Event mongoose schema
 const EventSchema = new Schema({
   awayName: {
     type: String,
-    required: 'awayName must be a string'
+    required: "awayName must be a string"
   },
   createdAt: {
     type: Date,
@@ -14,41 +13,41 @@ const EventSchema = new Schema({
   },
   group: {
     type: String,
-    required: 'group must be a string'
+    required: "group must be a string"
   },
   homeName: {
     type: String,
-    required: 'homeName must be a string'
+    required: "homeName must be a string"
   },
   name: {
     type: String,
-    required: 'name must be a string'
+    required: "name must be a string"
   },
   id: {
     type: Number,
-    required: 'id must be a number'
+    required: "id must be a number"
   },
   objectId: {
     type: String,
-    required: 'objectId must be a string'
+    required: "objectId must be a string"
   },
   sport: {
     type: String,
-    required: 'sport must be a string'
+    required: "sport must be a string"
   },
   state: {
     type: String,
-    required: 'state must be a string'
+    required: "state must be a string"
   },
   country: {
     type: String,
-    required: 'country must be a string'
+    required: "country must be a string"
   },
   state: {
     type: String,
-    enum: ['NOT_STARTED', 'STARTED', 'FINISHED'],
-    default: ['NOT_STARTED']
+    enum: ["NOT_STARTED", "STARTED", "FINISHED"],
+    default: ["NOT_STARTED"]
   }
 });
 
-module.exports = mongoose.model('Event', EventSchema);
+module.exports = mongoose.model("Event", EventSchema);

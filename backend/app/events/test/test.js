@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+let mongoose = require("mongoose");
+// set mongoose model as empty object to enable recompiling it
 mongoose.models = {};
 
 const chai = require("chai");
