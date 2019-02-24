@@ -48,12 +48,14 @@ describe("POST /events", () => {
 
 describe("DELETE /events/:id", () => {
   it("Should delete an event", done => {
+    let id = 000000000;
+
     let newEvent = {
       awayName: "Test awayName",
       createdAt: new Date(),
       group: "Test group",
       homeName: "Test homeName",
-      id: 123456789123456789,
+      id: 000000000,
       name: "Test Name",
       objectId: "Test objectId",
       sport: "Test sport",
@@ -68,7 +70,7 @@ describe("DELETE /events/:id", () => {
       .end((err, res) => {
         chai
           .request(app)
-          .delete("/events/123456789")
+          .delete(`/events/${000000000}`)
           .end((err, res) => {
             assert.equal(res.status, 200);
             assert.property(res.body, "ok");
