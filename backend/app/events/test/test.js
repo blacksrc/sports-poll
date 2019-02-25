@@ -1,3 +1,4 @@
+const rand = require("random");
 let mongoose = require("mongoose");
 // set mongoose model as empty object to enable recompiling it
 mongoose.models = {};
@@ -5,8 +6,8 @@ mongoose.models = {};
 const chai = require("chai");
 const { assert } = require("chai");
 const chaiHttp = require("chai-http");
-chai.use(chaiHttp);
 const app = require("./../../../app");
+chai.use(chaiHttp);
 
 describe("POST /events", () => {
   it("Should create a new event", done => {
@@ -31,17 +32,20 @@ describe("POST /events", () => {
         assert.equal(res.status, 200);
         assert.isObject(res);
         assert.isObject(res.body);
-        assert.property(res.body, "awayName");
-        assert.property(res.body, "awayName");
-        assert.property(res.body, "createdAt");
-        assert.property(res.body, "group");
-        assert.property(res.body, "homeName");
-        assert.property(res.body, "id");
-        assert.property(res.body, "name");
-        assert.property(res.body, "objectId");
-        assert.property(res.body, "sport");
-        assert.property(res.body, "country");
-        assert.property(res.body, "state");
+        chai
+          .expect(res.body)
+          .to.include.keys(
+            "awayName",
+            "createdAt",
+            "group",
+            "homeName",
+            "id",
+            "name",
+            "objectId",
+            "sport",
+            "country",
+            "state"
+          );
         done();
       });
   });
@@ -91,17 +95,20 @@ describe("GET /events", () => {
         assert.equal(res.status, 200);
         assert.isObject(res);
         assert.isArray(res.body);
-        assert.property(res.body[0], "awayName");
-        assert.property(res.body[0], "awayName");
-        assert.property(res.body[0], "createdAt");
-        assert.property(res.body[0], "group");
-        assert.property(res.body[0], "homeName");
-        assert.property(res.body[0], "id");
-        assert.property(res.body[0], "name");
-        assert.property(res.body[0], "objectId");
-        assert.property(res.body[0], "sport");
-        assert.property(res.body[0], "country");
-        assert.property(res.body[0], "state");
+        chai
+          .expect(res.body[0])
+          .to.include.keys(
+            "awayName",
+            "createdAt",
+            "group",
+            "homeName",
+            "id",
+            "name",
+            "objectId",
+            "sport",
+            "country",
+            "state"
+          );
         done();
       });
   });
@@ -117,17 +124,20 @@ describe("GET /events/:id", () => {
         assert.isObject(res);
         assert.isArray(res.body);
         assert.lengthOf(res.body, 1);
-        assert.property(res.body[0], "awayName");
-        assert.property(res.body[0], "awayName");
-        assert.property(res.body[0], "createdAt");
-        assert.property(res.body[0], "group");
-        assert.property(res.body[0], "homeName");
-        assert.property(res.body[0], "id");
-        assert.property(res.body[0], "name");
-        assert.property(res.body[0], "objectId");
-        assert.property(res.body[0], "sport");
-        assert.property(res.body[0], "country");
-        assert.property(res.body[0], "state");
+        chai
+          .expect(res.body[0])
+          .to.include.keys(
+            "awayName",
+            "createdAt",
+            "group",
+            "homeName",
+            "id",
+            "name",
+            "objectId",
+            "sport",
+            "country",
+            "state"
+          );
         done();
       });
   });
