@@ -28,6 +28,7 @@
     "custom-env": "^1.0.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.14",
+    "random": "^2.1.1",
     "validator": "^10.11.0"
   }
 }
