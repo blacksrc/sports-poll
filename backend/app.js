@@ -21,7 +21,8 @@ const routes = require("./app/routes");
 
 // create new connection to mongodb
 mongoose.connect(`mongodb://${NODE_DB_HOST}:${NODE_DB_PORT}/${NODE_DB_NAME}`, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useFindAndModify: false
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
