@@ -55,3 +55,11 @@ exports.deleteEvent = (req, res) => {
     err ? res.send(err) : res.json(data);
   });
 };
+
+// delete event by id
+exports.fetchSports = (req, res) => {
+  Event.find({}).distinct('sport', (err, data) => {
+    console.log(data);
+    err ? res.send(err) : res.json(data);
+  });
+};
