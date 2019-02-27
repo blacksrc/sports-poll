@@ -1,8 +1,10 @@
 const routes = require("express").Router();
 const EventsRouter = require("./events/routes");
+const SportRouter = require("./sports/routes");
 
 // event routes
 routes.use("/events", EventsRouter);
+routes.use("/sports", SportRouter);
 
 // handling resource not found
 routes.use(function (req, res) {
