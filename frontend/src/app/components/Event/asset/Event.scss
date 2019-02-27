@@ -1,0 +1,21 @@
+.event-container {
+
+  .country {
+    text-align: center;
+  }
+
+  .team-container {
+    white-space: nowrap;
+    
+    @include breakpoint("xs_up") {
+      display: inline-block;
+      white-space: normal;
+      width: 50%;
+      text-align: center;
+    }
+
+    .name {
+
+    }
+  }
+}
