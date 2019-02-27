@@ -27,7 +27,7 @@ exports.fetchEvents = async (req, res) => {
     limit = Number(limit);
     Query.limit(limit);
   } else if (limit === undefined && random !== undefined) {
-    Query.skip(rand.int(0, documentCount));
+    Query.skip(rand.int(0, documentCount - 1));
     Query.limit(1);
   } else if (limit !== undefined && random !== undefined) {
     Query.skip(rand.int(0, documentCount));
@@ -58,8 +58,18 @@ exports.deleteEvent = (req, res) => {
 
 // delete event by id
 exports.fetchSports = (req, res) => {
-  Event.find({}).distinct('sport', (err, data) => {
-    console.log(data);
+  Event.find({}).distinct("sport", (err, data) => {
     err ? res.send(err) : res.json(data);
   });
+};
+
+// vote an event
+exports.voteEvent = (req, res) => {
+  Event.findOneAndUpdate(
+    { id: req.params.id },
+    { result: req.body.result },
+    (err, data) => {
+      err ? res.send(err) : res.json(data);
+    }
+  );
 };

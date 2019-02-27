@@ -47,6 +47,11 @@ const EventSchema = new Schema({
     type: String,
     enum: ["NOT_STARTED", "STARTED", "FINISHED"],
     default: ["NOT_STARTED"]
+  },
+  result: {
+    type: String,
+    enum: ["HOME", "AWAY", "DRAW"],
+    default: [""]
   }
 });
 
