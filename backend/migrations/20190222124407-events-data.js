@@ -11,7 +11,7 @@ module.exports = {
           "name": "Chania FC - Panthrakikos Komotini",
           "objectId": "1UaQjc7lIb",
           "sport": "FOOTBALL",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "STARTED"
         },
         {
@@ -23,7 +23,7 @@ module.exports = {
           "name": "Olympiakos Volos - PAOK Thessaloniki",
           "objectId": "UPJ240T2Qj",
           "sport": "FOOTBALL",
-          "country": "FRANCE",
+          "country": "FR",
           "state": "STARTED"
         },
         {
@@ -35,7 +35,7 @@ module.exports = {
           "name": "Israel U18 - Ukraine U18",
           "objectId": "fZZUhitsVt",
           "sport": "FOOTBALL",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "STARTED"
         },
         {
@@ -47,7 +47,7 @@ module.exports = {
           "name": "CA Bizertin - Stade Gabesien",
           "objectId": "Bf52z7GIut",
           "sport": "FOOTBALL",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "STARTED"
         },
         {
@@ -59,7 +59,7 @@ module.exports = {
           "name": "Club Africain - AS de la Marsa",
           "objectId": "sFjPkmljKv",
           "sport": "FOOTBALL",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "STARTED"
         },
         {
@@ -71,7 +71,7 @@ module.exports = {
           "name": "Kar\u015f\u0131yaka - Kastamonuspor",
           "objectId": "cRqV2RTmsu",
           "sport": "FOOTBALL",
-          "country": "FRANCE",
+          "country": "FR",
           "state": "FINISHED"
         },
         {
@@ -83,7 +83,7 @@ module.exports = {
           "name": "Ding Junhui - Allen, Gareth",
           "objectId": "nPuz011p0W",
           "sport": "SNOOKER",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "NOT_STARTED"
         },
         {
@@ -95,7 +95,7 @@ module.exports = {
           "name": "Trump, Judd - Lines, Peter",
           "objectId": "CSJn3kZhdx",
           "sport": "SNOOKER",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "NOT_STARTED"
         },
         {
@@ -107,7 +107,7 @@ module.exports = {
           "name": "Dinamo Astrakhan - SKIF-Krasnodar",
           "objectId": "enCbqOuRLr",
           "sport": "HANDBALL",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "STARTED"
         },
         {
@@ -119,7 +119,7 @@ module.exports = {
           "name": "Zauralie Kurgan - THK Tver",
           "objectId": "7HWfuCIMlp",
           "sport": "ICE_HOCKEY",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "STARTED"
         },
         {
@@ -131,7 +131,7 @@ module.exports = {
           "name": "Harris, L G M\/Maamoun, K M - Doumbia, S\/Reboul, F",
           "objectId": "JxrZyQKTrw",
           "sport": "TENNIS",
-          "country": "FRANCE",
+          "country": "FR",
           "state": "STARTED"
         },
         {
@@ -143,7 +143,7 @@ module.exports = {
           "name": "Bangoura, Sekou - Halebian, Alexios",
           "objectId": "tALMRNqAxD",
           "sport": "TENNIS",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "NOT_STARTED"
         },
         {
@@ -155,7 +155,7 @@ module.exports = {
           "name": "Pla Malfeito, Jaume - Roberts, Justin",
           "objectId": "KGA9nqYAJl",
           "sport": "TENNIS",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "FINISHED"
         },
         {
@@ -167,7 +167,7 @@ module.exports = {
           "name": "Clayton, Scott - Mridha, J",
           "objectId": "utc63de1Fl",
           "sport": "TENNIS",
-          "country": "FRANCE",
+          "country": "FR",
           "state": "STARTED"
         },
         {
@@ -179,7 +179,7 @@ module.exports = {
           "name": "Buyukakcay, C\/Krunic, A - Kania, P\/Kerkhove, L",
           "objectId": "mTVUIuYdbF",
           "sport": "TENNIS",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "NOT_STARTED"
         },
         {
@@ -191,7 +191,7 @@ module.exports = {
           "name": "Baskova, D\/Podlinska, M - Chernetsova, D\/Perper, A",
           "objectId": "heL53W56d2",
           "sport": "TENNIS",
-          "country": "FRANCE",
+          "country": "FR",
           "state": "STARTED"
         },
         {
@@ -203,7 +203,7 @@ module.exports = {
           "name": "Stoilkovska, M - Njoze, M",
           "objectId": "gldlV9xhi2",
           "sport": "TENNIS",
-          "country": "SWEDEN",
+          "country": "SE",
           "state": "STARTED"
         },
         {
@@ -215,7 +215,7 @@ module.exports = {
           "name": "Jia-Jing Lu - Haas, Barbara",
           "objectId": "V6Qsm2Wlms",
           "sport": "TENNIS",
-          "country": "ENGLAND",
+          "country": "GB",
           "state": "FINISHED"
         }
       ]
