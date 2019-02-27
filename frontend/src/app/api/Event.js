@@ -10,6 +10,15 @@ class EventModel extends API {
       callback(data);
     });
   }
+
+  voteEvent(id, result, callback) {
+    this.request("/vote", { 
+      method: 'post',
+      data: {id, result} 
+    }, data => {
+      callback(data);
+    });
+  }
 }
 
 export default EventModel;
