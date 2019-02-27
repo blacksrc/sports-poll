@@ -8,35 +8,27 @@ class API {
   }
 
   request(path, passedParams, callback) {
-    /* let defaultHeader = {
-      'Content-Type': 'application/json'
-    }
-
-    passedParams.headers = Object.assign({}, defaultHeader, passedParams.headers);
-    const params = Object.assign({}, {
-      baseURL: this.createBaseUrl(this.domain, this.port),
-      url: path,
-      method: 'GET',
-      data: {},
-      headers: {},
-      timeout: 5000,
-    }, passedParams); */
-
-    /* let defaultHeaders = {
-      'Content-Type': 'application/json'
-    } */
-
-    //let passedParams.headers = { ...defaultHeaders, passedParams.headers) };
-
-    let defaultParams = {
-      baseURL: this.createBaseUrl(this.domain, this.port),
-      url: path,
-      method: "GET",
-      data: {},
-      headers: {},
-      timeout: 5000
+    let defaultHeader = {
+      "Content-Type": "application/json"
     };
-    let params = { ...defaultParams, passedParams };
+
+    passedParams.headers = Object.assign(
+      {},
+      defaultHeader,
+      passedParams.headers
+    );
+    const params = Object.assign(
+      {},
+      {
+        baseURL: this.createBaseUrl(this.domain, this.port),
+        url: path,
+        method: "GET",
+        data: {},
+        headers: {},
+        timeout: 5000
+      },
+      passedParams
+    );
 
     axios(params).then(
       response => callback(this.preperResponse(response)),
