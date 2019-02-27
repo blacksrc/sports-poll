@@ -1,9 +1,9 @@
 const routes = require("express").Router();
-const EventsControllers = require("./controller");
+const EventsController = require("./controller");
 
-routes.post("/", EventsControllers.createEvent);
-routes.get("/", EventsControllers.fetchEvents);
-routes.get("/:id", EventsControllers.fetchEvents);
-routes.delete("/:id", EventsControllers.deleteEvent);
+routes.post("/", EventsController.createEvent);
+routes.get("/", EventsController.fetchEvents);
+routes.get("/:id", EventsController.fetchEvents);
+routes.delete("/:id", EventsController.deleteEvent);
 
 module.exports = routes;
