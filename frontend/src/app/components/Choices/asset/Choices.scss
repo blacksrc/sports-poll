@@ -1,0 +1,29 @@
+.choices-container {
+  white-space: nowrap;
+  padding: 20px 0px;
+  text-align: center;
+
+  .button-container {
+    @include breakpoint("xs_up") {
+      display: inline-block;
+      white-space: normal;
+      width: 33.3%;
+    }
+
+    .button {
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+
+      &.home,
+      &.away {
+        background-color: $color6;
+        color: $color1;
+      }
+
+      &.draw {
+        color: $color4;
+      }
+    }
+  }
+}
