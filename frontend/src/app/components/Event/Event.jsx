@@ -28,6 +28,10 @@ class Event extends Component {
   }
 
   componentDidMount() {
+    this.loadEvent();
+  }
+
+  loadEvent() {
     new EventModel().fetchRandomEvent(event => {
       this.setState({ event: event.data[0] });
     });
@@ -38,7 +42,7 @@ class Event extends Component {
       return null;
     }
 
-    let { homeName, awayName, country, sport } = this.state.event;
+    let { homeName, awayName, country, sport, result } = this.state.event;
     let sportImage = this.getSportImage(sport);
 
     return (
@@ -54,16 +58,26 @@ class Event extends Component {
         </div>
         <div className="team-container">
           <div className="name">
-            {homeName} <div className="type">(Home)</div>
+            {homeName} 
+            <div className="type">(Home {result == "home" ? "Selected" : ""})</div>
           </div>
         </div>
         <div className="team-container">
           <div className="name">
-            {awayName} <div className="type">(Away)</div>
+            <div className="type">(Draw {result == "draw" ? "Selected" : ""})</div>
+          </div>
+        </div>
+        <div className="team-container">
+          <div className="name">
+            {awayName} 
+            <div className="type">(Away {result == "away" ? "Selected" : ""})</div>
           </div>
         </div>
 
-        <Choices event={this.state.event} />
+        <Choices
+          event={this.state.event}
+          onLoadEvent={() => this.loadEvent()}
+        />
       </div>
     );
   }

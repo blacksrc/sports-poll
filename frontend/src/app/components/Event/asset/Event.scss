@@ -17,10 +17,10 @@
     width:100%;
     margin-bottom: 10px;
 
-    @include breakpoint("sm_up") {
+    @include breakpoint("md_up") {
       display: inline-block;
       white-space: normal;
-      width: 50%;
+      width: 33.3%;
       text-align: center;
     }
 
