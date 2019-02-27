@@ -12,9 +12,9 @@ class EventModel extends API {
   }
 
   voteEvent(id, result, callback) {
-    this.request("/vote", { 
+    this.request(`/events/${id}/vote`, { 
       method: 'post',
-      data: {id, result} 
+      data: { result } 
     }, data => {
       callback(data);
     });
