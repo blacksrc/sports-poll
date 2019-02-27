@@ -1,11 +1,11 @@
 {
-  "name": "sports-poll",
+  "name": "sports-poll-backend",
   "version": "1.0.0",
   "description": "Simple poll system around some sports events",
   "main": "app.js",
   "scripts": {
     "development": "NODE_ENV=development nodemon app.js",
-    "start": "NODE_ENV=production node app.js ",
+    "production": "NODE_ENV=production nodemon app.js ",
     "test": "NODE_ENV=test mocha app/**/test/ --watch"
   },
   "keywords": [
