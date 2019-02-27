@@ -1,0 +1,56 @@
+.choices-container {
+  white-space: nowrap;
+  padding: 20px 0px;
+  text-align: center;
+
+  .button-container {
+    padding: 10px 0px;
+
+    @include breakpoint("xs_up") {
+      display: inline-block;
+      white-space: normal;
+      width: 33.3%;
+    }
+
+    &.selected {
+      @include borderRadius(5px);
+      border: 1px solid $color6;
+    }
+
+    .button {
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      @include borderRadius(5px);
+
+      &.home,
+      &.away {
+        background-color: $color6;
+        color: $color1;
+      }
+
+      &.draw {
+        color: $color4;
+      }
+    }
+  }
+
+  .match-over-container {
+    padding: 10px;
+
+    .button {
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      @include borderRadius(5px);
+
+      &.next {
+        color: $color4;
+      }
+    }
+
+    .message {
+      font-size: 1em;
+    }
+  }
+}

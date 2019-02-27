@@ -1,3 +1,8 @@
+/*
+ * IMPORTANT
+ * This model should be the Sport model. But in the case of not changing the data shape. I used the Event model. 
+ */
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -47,11 +52,6 @@ const EventSchema = new Schema({
     type: String,
     enum: ["NOT_STARTED", "STARTED", "FINISHED"],
     default: ["NOT_STARTED"]
-  },
-  result: {
-    type: String,
-    enum: ["HOME", "AWAY", "DRAW"],
-    default: [""]
   }
 });
 

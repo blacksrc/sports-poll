@@ -1,0 +1,37 @@
+.event-container {
+  .info {
+    text-align: center;
+
+    .sport {
+      width: 90px;
+    }
+
+    .flag {
+      width: 40px;
+    }
+  }
+
+  .team-container {
+    white-space: nowrap;
+    text-align: center;
+    width:100%;
+    margin-bottom: 10px;
+
+    @include breakpoint("md_up") {
+      display: inline-block;
+      white-space: normal;
+      width: 33.3%;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 0.9em;
+
+      .type {
+        color: $color5;
+        font-size: 0.8em;
+        font-style: italic;
+      }
+    }
+  }
+}

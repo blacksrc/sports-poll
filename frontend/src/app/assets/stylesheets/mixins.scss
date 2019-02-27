@@ -1,0 +1,104 @@
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin boxShadow($h, $v, $blur, $spread, $color) {
+  -webkit-box-shadow: $h $v $blur $spread $color;
+  -moz-box-shadow: $h $v $blur $spread $color;
+  box-shadow: $h $v $blur $spread $color;
+}
+
+@mixin transition($property: all, $time: 0.2s) {
+  transition: $property $time ease-in-out;
+  -o-transition: $property $time ease-in-out;
+  -ms-transition: $property $time ease-in-out;
+  -moz-transition: $property $time ease-in-out;
+  -webkit-transition: $property $time ease-in-out;
+}
+
+@mixin disabled($opacity: 0.6) {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  filter: gray;
+  opacity: $opacity;
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == xs_up {
+    @media (min-width: 1px) {
+      @content;
+    }
+  } @else if $point == sm_up {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $point == md_up {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == lg_up {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == xl_up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $point == xs_down {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  } @else if $point == sm_down {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $point == md_down {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  } @else if $point == lg_down {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  }
+}

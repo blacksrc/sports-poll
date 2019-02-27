@@ -1,0 +1,23 @@
+.poll-container {
+
+  margin: 0 auto;
+  padding: 10px;
+
+  @include breakpoint("xl") {
+    max-width: 1000px;
+  }
+
+  @include breakpoint("lg") {
+    max-width: 800px;
+  }
+
+  @include breakpoint("md_down") {
+    max-width: 100%;
+  }
+
+  .poll-box {
+    background-color: $pollBoxBackgroundColor;
+    padding: 10px;
+    @include borderRadius(4px);
+  }
+}
