@@ -68,4 +68,12 @@ APP_API_PORT=<PORT: 3001>
 ```sh
 $ npm run development
 ```
+# Todo
+- [ ] Update backend test cases.
+- [ ] Create API documantion using postman.
+- [ ] Write some frontend test cases.
+- [ ] Create frontend documantation using Storybook or docz.
+- [ ] Fix frontend env file.
+- [ ] Google login implementation.
+
 
