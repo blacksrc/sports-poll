@@ -12,27 +12,17 @@
       width: 33.3%;
     }
 
-    &.selected {
-      @include borderRadius(5px);
-      border: 1px solid $color6;
-    }
+    .check-image {
 
-    .button {
-      padding: 10px;
-      border: none;
-      font-weight: bold;
-      @include borderRadius(5px);
+      width: 50px;
+      height: 50px;
 
-      &.home,
-      &.away {
-        background-color: $color6;
-        color: $color1;
+      &.disable {
+        @include disabled();
       }
 
-      &.draw {
-        color: $color4;
-      }
     }
+
   }
 
   .match-over-container {

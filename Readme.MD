@@ -57,15 +57,23 @@ $ npm run development
 ```sh
 $ npm i
 ```
-3. Rename `.env.example` file to `.env.development`. Then open the renamed file and add your environment variables:
+3. Rename `.env.example` file to `.env`. Then open the renamed file and add your environment variables:
 
 ```env
-APP_API_HOST=<HOST: localhost>
-APP_API_PORT=<PORT: 3001>
+API_HOST=<HOST: localhost>
+API_PORT=<PORT: 3001>
 ```
 
 4. Run project in a development mode.
 ```sh
 $ npm run development
 ```
+# Todo
+- [X] Fix frontend env file.
+- [ ] Improve backend test cases with mongomock.
+- [ ] Create API documantion using postman.
+- [ ] Create frontend documantation using Storybook or docz.
+- [ ] Write some frontend test cases.
+- [ ] Google login implementation.
+
 
