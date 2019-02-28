@@ -69,11 +69,11 @@ API_PORT=<PORT: 3001>
 $ npm run development
 ```
 # Todo
-- [ ] Update backend test cases.
+- [X] Fix frontend env file.
+- [ ] Improve backend test cases with mongomock.
 - [ ] Create API documantion using postman.
 - [ ] Write some frontend test cases.
 - [ ] Create frontend documantation using Storybook or docz.
-- [ ] Fix frontend env file.
 - [ ] Google login implementation.
 
 
