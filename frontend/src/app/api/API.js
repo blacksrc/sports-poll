@@ -1,8 +1,7 @@
 import axios from "axios";
-import { api } from "./../config/config";
 
 class API {
-  constructor(domain = api.domain, port = api.port) {
+  constructor(domain = process.env.API_HOST, port = process.env.API_PORT) {
     this.domain = domain;
     this.port = port;
   }
