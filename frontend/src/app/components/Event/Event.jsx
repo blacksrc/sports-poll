@@ -58,19 +58,20 @@ class Event extends Component {
         </div>
         <div className="team-container">
           <div className="name">
-            {homeName} 
-            <div className="type">(Home{result == "home" ? " Selected" : ""})</div>
+            {homeName}
+            <div className="type">(Home)</div>
+          </div>
+          
+        </div>
+        <div className="team-container">
+          <div className="name">
+            <div className="type">(Draw)</div>
           </div>
         </div>
         <div className="team-container">
           <div className="name">
-            <div className="type">(Draw{result == "draw" ? " Selected" : ""})</div>
-          </div>
-        </div>
-        <div className="team-container">
-          <div className="name">
-            {awayName} 
-            <div className="type">(Away{result == "away" ? " Selected" : ""})</div>
+            {awayName}
+            <div className="type">(Away)</div>
           </div>
         </div>
 

@@ -72,8 +72,8 @@ $ npm run development
 - [X] Fix frontend env file.
 - [ ] Improve backend test cases with mongomock.
 - [ ] Create API documantion using postman.
-- [ ] Write some frontend test cases.
 - [ ] Create frontend documantation using Storybook or docz.
+- [ ] Write some frontend test cases.
 - [ ] Google login implementation.
 
 
