@@ -57,11 +57,11 @@ $ npm run development
 ```sh
 $ npm i
 ```
-3. Rename `.env.example` file to `.env.development`. Then open the renamed file and add your environment variables:
+3. Rename `.env.example` file to `.env`. Then open the renamed file and add your environment variables:
 
 ```env
-APP_API_HOST=<HOST: localhost>
-APP_API_PORT=<PORT: 3001>
+API_HOST=<HOST: localhost>
+API_PORT=<PORT: 3001>
 ```
 
 4. Run project in a development mode.
