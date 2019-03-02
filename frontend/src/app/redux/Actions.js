@@ -1,9 +1,9 @@
 import { setSports } from "./sport/actions";
 
 const actions = {
-  sports: {
-    setSports,
-  }
-}
+	sports: {
+		setSports
+	}
+};
 
 export default actions;

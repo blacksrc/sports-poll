@@ -5,26 +5,26 @@ import Sport from "./../../api/Sport";
 import "./asset/Poll.scss";
 
 class Poll extends Component {
-  constructor(props) {
-    super(props);
-  }
+	constructor(props) {
+		super(props);
+	}
 
-  componentDidMount() {
-    new Sport().fetchSports(sports => {
-      this.props.setSports({ sports: sports.data });
-    });
-  }
+	componentDidMount() {
+		new Sport().fetchSports(sports => {
+			this.props.setSports({ sports: sports.data });
+		});
+	}
 
-  render() {
-    return (
-      <div className="poll-container">
-        <section className="poll-box">
-          <Header />
-          <Event />
-        </section>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="poll-container">
+				<section className="poll-box">
+					<Header />
+					<Event />
+				</section>
+			</div>
+		);
+	}
 }
 
 export default Poll;

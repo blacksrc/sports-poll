@@ -6,12 +6,12 @@ import TENNIS from "./../assets/images/tennis.png";
 import CHECKED from "./../assets/images/checked.png";
 
 export const theme = {
-  images: {
-    FOOTBALL: FOOTBALL,
-    SNOOKER: SNOOKER,
-    HANDBALL: HANDBALL,
-    ICE_HOCKEY: ICE_HOCKEY,
-    TENNIS: TENNIS,
-    CHECKED: CHECKED
-  },
-}
+	images: {
+		FOOTBALL: FOOTBALL,
+		SNOOKER: SNOOKER,
+		HANDBALL: HANDBALL,
+		ICE_HOCKEY: ICE_HOCKEY,
+		TENNIS: TENNIS,
+		CHECKED: CHECKED
+	}
+};

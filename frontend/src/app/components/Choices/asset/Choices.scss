@@ -1,46 +1,43 @@
 .choices-container {
-  white-space: nowrap;
-  padding: 20px 0px;
-  text-align: center;
+	white-space: nowrap;
+	padding: 20px 0px;
+	text-align: center;
 
-  .button-container {
-    padding: 10px 0px;
+	.button-container {
+		padding: 10px 0px;
 
-    @include breakpoint("xs_up") {
-      display: inline-block;
-      white-space: normal;
-      width: 33.3%;
-    }
+		@include breakpoint("xs_up") {
+			display: inline-block;
+			white-space: normal;
+			width: 33.3%;
+		}
 
-    .check-image {
+		.check-image {
+			width: 50px;
+			height: 50px;
 
-      width: 50px;
-      height: 50px;
+			&.disable {
+				@include disabled();
+			}
+		}
+	}
 
-      &.disable {
-        @include disabled();
-      }
+	.match-over-container {
+		padding: 10px;
 
-    }
+		.button {
+			padding: 10px;
+			border: none;
+			font-weight: bold;
+			@include borderRadius(5px);
 
-  }
+			&.next {
+				color: $color4;
+			}
+		}
 
-  .match-over-container {
-    padding: 10px;
-
-    .button {
-      padding: 10px;
-      border: none;
-      font-weight: bold;
-      @include borderRadius(5px);
-
-      &.next {
-        color: $color4;
-      }
-    }
-
-    .message {
-      font-size: 1em;
-    }
-  }
+		.message {
+			font-size: 1em;
+		}
+	}
 }
