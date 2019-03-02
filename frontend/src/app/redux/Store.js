@@ -6,7 +6,7 @@ const persistedState = loadState() || {};
 let store = createStore(rootReducer, persistedState);
 
 store.subscribe(() => {
-  saveState(store.getState());
+	saveState(store.getState());
 });
 
 export default store;

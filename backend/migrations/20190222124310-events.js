@@ -1,9 +1,9 @@
 module.exports = {
-  up(db) {
-    return db.createCollection("events");
-  },
+	up(db) {
+		return db.createCollection("events");
+	},
 
-  down(db) {
-    return db.collection("events").drop()
-  }
+	down(db) {
+		return db.collection("events").drop();
+	}
 };

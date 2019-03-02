@@ -1,3 +1,3 @@
-import Choices from './Choices.jsx';
+import Choices from "./Choices.jsx";
 
 export default Choices;

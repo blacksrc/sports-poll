@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import sportReducer from "./sport/reducers";
 
 const rootReducer = combineReducers({
-  sport: sportReducer,
+	sport: sportReducer
 });
 
 export default rootReducer;
