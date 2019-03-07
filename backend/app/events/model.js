@@ -50,7 +50,7 @@ const EventSchema = new Schema({
 	},
 	result: {
 		type: String,
-		enum: ["HOME", "AWAY", "DRAW"],
+		enum: ["HOME", "AWAY", "DRAW", ""],
 		default: [""]
 	}
 });

@@ -1,12 +1,9 @@
 import API from "./API";
 
 class EventModel extends API {
-	constructor() {
-		super();
-	}
 
-	fetchRandomEvent(callback) {
-		this.request("/events?random", {}, data => {
+	fetchRandomEvent(sport, callback) {
+		this.request(`/events?random&sport=${sport}`, {}, data => {
 			callback(data);
 		});
 	}
