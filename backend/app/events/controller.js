@@ -9,10 +9,10 @@ exports.fetchEvents = async (req, res) => {
 
 	// destruct random and limit out of query and id out of params
 	const { id } = req.params;
-	let { random, limit } = req.query;
+	let { random, limit, sport } = req.query;
 
 	// by default search filter is an empty object to return all documents
-	let searchCondition = {};
+	let searchCondition = { result: ""};
 
 	// if :id exists then it will be added to searchCondition object
 	searchCondition = {
@@ -20,10 +20,10 @@ exports.fetchEvents = async (req, res) => {
 	};
 
 	// Creating Query object with searchCondition
-	let Query = Event.find(searchCondition);
+	let Query = Event.find(searchCondition).where({ result: null }).where({ sport: sport }).where({ state: {$ne: "FINISHED"}});
 
 	// Check limit and random queries to show documents limited or randomly depend on which of these queries is set
-	if (limit !== undefined && random === undefined) {
+	/*if (limit !== undefined && random === undefined) {
 		limit = Number(limit);
 		Query.limit(limit);
 	} else if (limit === undefined && random !== undefined) {
@@ -33,7 +33,7 @@ exports.fetchEvents = async (req, res) => {
 		Query.skip(rand.int(0, documentCount));
 		limit = Number(limit);
 		Query.limit(limit);
-	}
+	}*/
 
 	// executing the query to fetch resault from mongodb
 	Query.exec((err, data) => {

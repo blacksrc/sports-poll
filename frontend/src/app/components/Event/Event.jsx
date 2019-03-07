@@ -7,8 +7,12 @@ import Choices from "./../Choices";
 class Event extends Component {
 	constructor(props) {
 		super(props);
+
+		this.getNextSportCategory = this.getNextSportCategory.bind(this);
+
 		this.state = {
-			event: null
+			event: null,
+			currentSportIndex: 0
 		};
 	}
 
@@ -31,8 +35,24 @@ class Event extends Component {
 		this.loadEvent();
 	}
 
+	getNextSportCategory(index) {
+		return this.props.sports[index]
+	}
+
 	loadEvent() {
-		new EventModel().fetchRandomEvent(event => {
+		let currentSport = this.getNextSportCategory(this.state.currentSportIndex);
+		
+		new EventModel().fetchRandomEvent(currentSport, event => {
+			if (event.data.length  == 0) {
+				this.setState({ currentSportIndex: this.state.currentSportIndex + 1 }, () => {
+
+					let sport = this.getNextSportCategory(this.state.currentSportIndex);
+
+					new EventModel().fetchRandomEvent(sport, event => {
+						this.setState({ event: event.data[0] });
+					});
+				});
+			}
 			this.setState({ event: event.data[0] });
 		});
 	}
